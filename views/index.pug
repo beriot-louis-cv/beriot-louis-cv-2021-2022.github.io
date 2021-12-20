@@ -1,0 +1,73 @@
+include includes/_bullet-card.pug
+doctype
+html(lang='en')
+	head
+		meta(charset='utf-8', author='louis', keywords='CV worker hire belgium BE beriot web developer designer bilingual french français')
+		title C.V. de Louis Bériot
+		link(rel='stylesheet', href='/style/main.css')
+	body
+		div
+			noscript.no-js-alert A few features will not work with Javascript disabled;
+			br 
+			|Consider enabling it! There is nothing malicious! I swear :\)
+		header
+			nav#sticky-nav
+				img(src="/resources/images/logo.svg", alt="Back to the top of the main page")
+				ul
+					li Skills
+					li Education
+					li References
+					li Hobbies and other works
+					li Get in touch!
+			h1 Louis Bériot
+			div the infographist reimagined
+			a.get-in-touch-button(href="www.google.com") Get in touch
+			div Not sure?
+			div That's fine, scroll down
+			img.hero-graphic(src="", alt="hero graphic")
+		main
+			section
+				article.cardContainer
+					img(src='image', alt='alt', class!='card-left-alignement')
+					div
+						p subtitle
+						h3 title
+						p block
+			section
+				h2
+				video(src="https://www.youtube.com/watch?v=dQw4w9WgXcQ", autoplay="true", muted="true")
+			section#skills-section
+				article 1
+				article 2
+				article 3
+			section#references-section
+				article 1
+				article 2
+				article 3
+			section#reviews
+				article 1
+				article 2
+				article 3
+		footer
+			nav#social-medias
+				h3 Social Medias
+				ul
+					li 
+						a(href="reddit.com") Reddit
+					li 
+						a(href="twitter.com") Twitter
+					li 
+						a(href="facebook.com") Facebook
+					li 
+						a(href="youtube.com") Youtube
+			div
+				h3 Office
+				address
+					div 288, Avenue Louis Jasmin<br>1140 Bruxelles<br>04&nbsp;69&nbsp;420&nbsp;4480
+				h4 Choose a language
+				form(action="" method="GET")
+					select#language-dropdown(name="language")
+						option(value="english") English
+						option(value="french") Français
+						option(value="dutch") Nederlands
+	script(src="/js/main.js") 

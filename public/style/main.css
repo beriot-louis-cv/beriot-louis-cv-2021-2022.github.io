@@ -1,0 +1,54 @@
+@import "./partials/reset.css";
+@-moz-keyframes show-then-retract {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+@-webkit-keyframes show-then-retract {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+@-o-keyframes show-then-retract {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+@keyframes show-then-retract {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+.leftAligned {
+  float: right;
+}
+.cardContainer {
+  padding: 2px;
+  max-width: 50%;
+}
+.get-in-touch-button {
+  background-color: #fb542b;
+  border-radius: 15%;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+.no-js-alert {
+  position: fixed;
+  display: block;
+  background-color: #da1616;
+  color: #fff;
+  animation: show-then-retract 2s ease-in 5s 1 forwards;
+}
