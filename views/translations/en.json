@@ -1,3 +1,5 @@
 { 
-	"name": "Tobi" 
+	"name": "Tobi",
+	"jsalert1": "A few features will not work with Javascript disabled",
+	"jsalert2": "Consider enabling it! There is nothing malicious! I swear :)"
 }

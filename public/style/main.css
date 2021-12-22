@@ -4,7 +4,7 @@
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-100px);
+    transform: translateY(100px);
   }
 }
 @-webkit-keyframes show-then-retract {
@@ -12,7 +12,7 @@
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-100px);
+    transform: translateY(100px);
   }
 }
 @-o-keyframes show-then-retract {
@@ -20,7 +20,7 @@
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-100px);
+    transform: translateY(100px);
   }
 }
 @keyframes show-then-retract {
@@ -28,8 +28,15 @@
     transform: translateY(0px);
   }
   to {
-    transform: translateY(-100px);
+    transform: translateY(100px);
   }
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("/font/Mulish/Mulish-VariableFont_wght.ttf") format("truetype"), url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap") format("truetype");
+}
+body {
+  font-family: "Mulish", sans-serif;
 }
 .leftAligned {
   float: right;
@@ -45,10 +52,36 @@
   text-decoration: none;
   color: #fff;
 }
-.no-js-alert {
+#no-js-alert {
   position: fixed;
   display: block;
+  bottom: 0;
+  min-width: 100vw;
+  text-align: center;
+  padding: 1em;
   background-color: #da1616;
   color: #fff;
   animation: show-then-retract 2s ease-in 5s 1 forwards;
+}
+#sticky-nav {
+  position: sticky;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 0 1.25em;
+  align-items: center;
+  min-height: 5vh;
+  background-color: rgba(28,28,28,0.88);
+}
+#sticky-nav img {
+  border-radius: 50%;
+}
+#sticky-nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+#sticky-nav ul li:last-child {
+  border: 1px solid #fff;
+  border-radius: 9px;
 }

@@ -1,7 +1,10 @@
-@require "./partials/reset.css"
-@require "./partials/keyframes/keyframes.styl"
+@require "./parts/reset.css"
+@require "./parts/keyframes.styl"
+@require "./parts/constants.styl"
+@require "./parts/fontfaces.styl"
 
-braveOrange = #FB542B
+body
+	font-family: "Mulish", sans-serif;
 
 .leftAligned
 	float: right
@@ -20,9 +23,36 @@ braveOrange = #FB542B
 	// background-image: url('../resources/images/')
 #reviews::before
 	// background-image: url('../resources/images/')
-.no-js-alert
+
+// JS alert
+#no-js-alert
 	position: fixed
 	display: block
+	bottom: 0
+	min-width: 100vw
+	text-align: center
+	padding: 1em
 	background-color: rgb(218, 22, 22)
 	color: white
 	animation: show-then-retract 2s ease-in 5s 1 forwards
+
+// top nav
+#sticky-nav
+	position: sticky
+	display: flex
+	flex-flow: row nowrap
+	justify-content: space-between
+	padding: 0 1.25em
+	align-items: center
+	min-height: 5vh
+	background-color: rgba(28, 28, 28, 0.88)
+#sticky-nav img
+	border-radius: 50%
+#sticky-nav ul
+	display: flex
+	flex-direction: row
+	gap: 15px
+#sticky-nav ul li:last-child
+	//TODO: EXPERIMENT WITH OUTLINE AND BOX_SIZING
+	border: 1px solid #fff
+	border-radius: 9px

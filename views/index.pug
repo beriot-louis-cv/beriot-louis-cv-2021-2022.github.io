@@ -6,13 +6,13 @@ html(lang='en')
 		title C.V. de Louis Bériot
 		link(rel='stylesheet', href='/style/main.css')
 	body
-		div
-			noscript.no-js-alert A few features will not work with Javascript disabled;
+		noscript#no-js-alert= jsalert1
 			br 
-			|Consider enabling it! There is nothing malicious! I swear :\)
+			|
+			= jsalert2
 		header
 			nav#sticky-nav
-				img(src="/resources/images/logo.svg", alt="Back to the top of the main page")
+				img(src="/img/svg/logo.svg", alt="Back to the top of the main page")
 				ul
 					li Skills
 					li Education
@@ -67,7 +67,7 @@ html(lang='en')
 				h4 Choose a language
 				form(action="" method="GET")
 					select#language-dropdown(name="language")
-						option(value="english") English
-						option(value="french") Français
-						option(value="dutch") Nederlands
+						option(value="en") English
+						option(value="fr") Français
+						option(value="nl") Nederlands
 	script(src="/js/main.js") 
