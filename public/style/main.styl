@@ -5,13 +5,11 @@
 
 body
 	font-family: "Mulish", sans-serif;
+a
+	text-decoration: none
+a:visited
+	color: #fff
 
-.leftAligned
-	float: right
-
-.cardContainer
-	padding: 2px
-	max-width: 50%
 
 .get-in-touch-button
 	background-color: braveOrange
@@ -46,13 +44,14 @@ body
 	align-items: center
 	min-height: 5vh
 	background-color: rgba(28, 28, 28, 0.88)
+	color: #fff
 #sticky-nav img
 	border-radius: 50%
 #sticky-nav ul
 	display: flex
 	flex-direction: row
-	gap: 15px
+	gap: 25px
 #sticky-nav ul li:last-child
-	//TODO: EXPERIMENT WITH OUTLINE AND BOX_SIZING
-	border: 1px solid #fff
+	outline: 2px solid #fff
+	outline-offset: 6px;
 	border-radius: 9px

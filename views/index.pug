@@ -2,7 +2,7 @@ include includes/_bullet-card.pug
 doctype
 html(lang='en')
 	head
-		meta(charset='utf-8', author='louis', keywords='CV worker hire belgium BE beriot web developer designer bilingual french français')
+		meta(charset='utf-8', author='louis', description='', keywords='CV worker hire belgium BE beriot web developer designer bilingual french français', viewport='width=device-width, initial-scale=1.0')
 		title C.V. de Louis Bériot
 		link(rel='stylesheet', href='/style/main.css')
 	body
@@ -14,11 +14,16 @@ html(lang='en')
 			nav#sticky-nav
 				img(src="/img/svg/logo.svg", alt="Back to the top of the main page")
 				ul
-					li Skills
-					li Education
-					li References
-					li Hobbies and other works
-					li Get in touch!
+					li 
+						a(href="#skills") Skills
+					li 
+						a(href="#education") Education
+					li 
+						a(href="#references") References
+					li 
+						a(href="#hobbies") Hobbies and other works
+					li 
+						a(href="#contact") Get in touch!
 			h1 Louis Bériot
 			div the infographist reimagined
 			a.get-in-touch-button(href="www.google.com") Get in touch
