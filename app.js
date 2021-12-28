@@ -30,6 +30,9 @@ app.get(/.svgz/, function(req, res, next) {
 });
 
 app.use('/', indexRouter);
+app.get('/test', function (req, res) {
+  res.render('./includes/_review-card.pug')
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
