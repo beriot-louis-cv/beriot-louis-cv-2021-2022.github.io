@@ -1,4 +1,5 @@
 include includes/_bullet-card.pug
+include includes/_review-card.pug
 doctype
 html(lang='en')
 	head
@@ -50,7 +51,7 @@ html(lang='en')
 				article 2
 				article 3
 			section#reviews
-				article 1
+				+review-card('At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.', 'https://purepng.com/public/uploads/large/purepng.com-google-logo-2015brandlogobrand-logoiconssymbolslogosgoogle-6815229372333mqrr.png', "Google's logo")
 				article 2
 				article 3
 		footer
