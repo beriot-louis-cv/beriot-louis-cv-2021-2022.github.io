@@ -7,29 +7,32 @@ html(lang='en')
 		title C.V. de Louis Bériot
 		link(rel='stylesheet', href='/style/main.css')
 	body
-		noscript#no-js-alert= jsalert1
+		noscript#no-js-alert= jsAlert1
 			br 
 			|
+			= jsAlert2
 		header.colored-background
 			nav#sticky-nav
 				img(src="/img/svg/logo.svg", alt="Back to the top of the main page")
 				ul
 					li 
-						a(href="#skills") Skills
+						a(href="#skills") #{skills}
 					li 
-						a(href="#education") Education
+						a(href="#education")= education
 					li 
-						a(href="#references") References
+						a(href="#references")= references
 					li 
-						a(href="#hobbies") Hobbies and other works
+						a(href="#hobbies")= hobbies
 					li 
-						a(href="#contact") Get in touch!
+						a(href="#contact")= contactMessage
 			h1 Louis Bériot
-			div#sub-h1 the infographist reimagined
-			a.get-in-touch-button(href="www.google.com") Get in touch
-			div Not sure?
-			div That's fine, scroll down
-			img.hero-graphic(src="", alt="hero graphic")
+			div#sub-h1= subTitle
+			a.get-in-touch-button(href="www.google.com")= contactMessage
+			p#small-message= smallMessage1
+				br
+				|
+				=smallMessage2
+			img#hero-graphic(src="/img/browser-hero-desktop.jpg", alt="hero graphic")
 		main
 			section
 				article.cardContainer
@@ -51,13 +54,16 @@ html(lang='en')
 				article 3
 			div#page-bottom.colored-background
 				section#reviews
-					+review-card('At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.', 'https://purepng.com/public/uploads/large/purepng.com-google-logo-2015brandlogobrand-logoiconssymbolslogosgoogle-6815229372333mqrr.png', "Google's logo")
+					+review-card('#{review1}', 'https://purepng.com/public/uploads/large/purepng.com-google-logo-2015brandlogobrand-logoiconssymbolslogosgoogle-6815229372333mqrr.png', "Google's logo")
 					+review-card('At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.', 'https://purepng.com/public/uploads/large/purepng.com-google-logo-2015brandlogobrand-logoiconssymbolslogosgoogle-6815229372333mqrr.png', "Google's logo")
 					+review-card('At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.', 'https://purepng.com/public/uploads/large/purepng.com-google-logo-2015brandlogobrand-logoiconssymbolslogosgoogle-6815229372333mqrr.png', "Google's logo")
 				ul#faq
+					li= faq1
+					li= faq2
+					li= faq3
 		footer.colored-background
 			nav#social-medias
-				h3 Social Medias
+				h3= socialMedia
 				ul
 					li 
 						a(href="reddit.com") Reddit
@@ -74,7 +80,7 @@ html(lang='en')
 				h4 Choose a language
 				form(action="" method="GET")
 					select#language-dropdown(name="language")
-						option(value="en") English
-						option(value="fr") Français
-						option(value="nl") Nederlands
+						option(value="en")= english
+						option(value="fr")= french
+						option(value="nl")= dutch
 	script(src="/js/main.js") 
