@@ -1,5 +1,5 @@
 { 
 	"name": "toba",
-	"jsalert1": "Quelques endroits du site pourraient ne pas fonctionner comme prévu sans Javascript...",
-	"jsalert2": "Je vous conseille de l'activer! Je peux vous assurer qu'il n'y a rien de malveillant :)"
+	"jsAlert1": "Quelques endroits du site pourraient ne pas fonctionner comme prévu sans Javascript...",
+	"jsAlert2": "Je vous conseille de l'activer! Je peux vous assurer qu'il n'y a rien de malveillant :)"
 }
