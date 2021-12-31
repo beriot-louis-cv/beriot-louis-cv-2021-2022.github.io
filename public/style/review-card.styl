@@ -1,12 +1,19 @@
 .review-card
-	background-color rgba(255, 255, 255, .1)
-	border-radius 26px
+	max-width 35%
 	display flex
 	flex-flow column nowrap
 	justify-content center
 	align-items center
-	max-width 80%
-	max-height  50%
+	background-color rgba(255, 255, 255, .1)
+	border-radius 26px
+	text-align center
+	margin auto
+	padding 15px
 .review-card img
-	max-width 80%
-	max-height  50%
+	margin-top 8px
+	max-width 40%
+	max-height  30%
+.review-card:nth-child(even)
+	transform translateX(-50px)
+.review-card:nth-child(odd)
+	transform translateX(50px)
