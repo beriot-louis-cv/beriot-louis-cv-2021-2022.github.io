@@ -14,6 +14,10 @@
         },
         unrollFaqItem() {
             this.faqItem.forEach(el => {
+                // sets height to 0 in js so the content can still be read without
+                el.children[0].style.height = '0';
+
+                // unroll on click only on the li item
                 el.addEventListener('mousedown', (e) => {
                     if (e.target.tagName !== 'P') {
                         let targetP = e.target.children[0];
