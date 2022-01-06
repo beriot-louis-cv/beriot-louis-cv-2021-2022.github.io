@@ -125,10 +125,14 @@ header .get-in-touch-button
 	flex-flow column nowrap
 	justify-content center
 #faq li p
+	height 0px
+	transition height .2s ease-out
 	overflow hidden
 	display flex
 	flex-direction column
 	justify-content center
+#faq li p.unrolled
+	height 500px
 
 // footer
 footer
