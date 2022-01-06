@@ -3,9 +3,11 @@
         init() {
             this.dropdown = document.querySelector('#language-dropdown');
             this.faqItem = document.querySelectorAll('#faq li');
+
+			this.submitLanguage();
 			this.unrollFaqItem();
         },
-        submitDropDown() {
+        submitLanguage() {
             this.dropdown.addEventListener('change', (e) => {
 				e.target.form.submit();
 			});
