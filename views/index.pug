@@ -1,4 +1,4 @@
-include includes/_bullet-card.pug
+include includes/_skill-card.pug
 include includes/_review-card.pug
 doctype
 html(lang='en')
@@ -32,22 +32,18 @@ html(lang='en')
 				br
 				|
 				=smallMessage2
-			img#hero-graphic(src="/img/browser-hero-desktop.jpg", alt="hero graphic")
+			img#hero-graphic(src="/img/browser-hero-desktop.jpg", alt=bel"hero graphic")
 		main
 			section
-				article.cardContainer
-					img(src='image', alt='alt', class!='card-left-alignement')
-					div
-						p subtitle
-						h3 title
-						p block
-			section
 				h2
-				video(src="https://www.youtube.com/watch?v=dQw4w9WgXcQ", autoplay="true", muted="true")
+				video(controls)
+					//- source(src="/video/Rick Astley - Never Gonna Give You Up (Official Music Video) [dQw4w9WgXcQ].webm" type="video/webm")
+					source(src="/video/Rick Astley - Never Gonna Give You Up (Official Music Video) [dQw4w9WgXcQ].opus" type="video/opus")
+					Your browser does not support the video tag.
 			section#skills-section
-				article 1
-				article 2
-				article 3
+				+skillCard('https://purepng.com/public/uploads/large/purepng.com-google-logo-2015brandlogobrand-logoiconssymbolslogosgoogle-6815229372333mqrr.png', "Google's logo", 'Testing the card', 'titleThe card', 'www.google.com', 'Link to Google.com')
+				+skillCard('https://purepng.com/public/uploads/large/purepng.com-google-logo-2015brandlogobrand-logoiconssymbolslogosgoogle-6815229372333mqrr.png', "Google's logo", 'Testing the card', 'titleThe card', 'www.google.com', 'Link to Google.com')
+				+skillCard('https://purepng.com/public/uploads/large/purepng.com-google-logo-2015brandlogobrand-logoiconssymbolslogosgoogle-6815229372333mqrr.png', "Google's logo", 'Testing the card', 'titleThe card', 'www.google.com', 'Link to Google.com')
 			section#references-section
 				article 1
 				article 2

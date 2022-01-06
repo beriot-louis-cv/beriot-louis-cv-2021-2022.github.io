@@ -1,0 +1,8 @@
+mixin skillCard(image, alt, subtitle, title, link, linkText)
+	article.skill-card
+		img(src=image, alt=alt, class!=attributes.class)
+		div
+			div subtitle
+			h3 title
+			p block
+			a(href=link) linkText
