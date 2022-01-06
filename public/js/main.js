@@ -8,6 +8,7 @@
 			this.unrollFaqItem();
         },
         submitLanguage() {
+            // submit form on dropdown change
             this.dropdown.addEventListener('change', (e) => {
 				e.target.form.submit();
 			});
