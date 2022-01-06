@@ -11,20 +11,20 @@ html(lang='en')
 			br 
 			|
 			= jsAlert2
+		nav#sticky-nav
+			img(src="/img/svg/logo.svg", alt="Back to the top of the main page")
+			ul
+				li 
+					a(href="#skills") #{skills}
+				li 
+					a(href="#education")= education
+				li 
+					a(href="#references")= references
+				li 
+					a(href="#hobbies")= hobbies
+				li 
+					a(href="#contact")= contactMessage
 		header.colored-background
-			nav#sticky-nav
-				img(src="/img/svg/logo.svg", alt="Back to the top of the main page")
-				ul
-					li 
-						a(href="#skills") #{skills}
-					li 
-						a(href="#education")= education
-					li 
-						a(href="#references")= references
-					li 
-						a(href="#hobbies")= hobbies
-					li 
-						a(href="#contact")= contactMessage
 			h1 Louis Bériot
 			div#sub-h1= subTitle
 			a.get-in-touch-button(href="www.google.com")= contactMessage
