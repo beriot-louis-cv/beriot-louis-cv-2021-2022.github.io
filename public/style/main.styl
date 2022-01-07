@@ -9,11 +9,13 @@
 
 body
 	font-family "Poppins regular", sans-serif
+
 a
 	text-decoration none
 	color pureWhite
-a:visited
-	color pureWhite
+	&:visited
+		color pureWhite
+
 .colored-background
 	color pureWhite
 
@@ -25,13 +27,13 @@ a:visited
 	padding 10px
 	text-decoration none
 	color pureWhite
-.get-in-touch-button::before
-	content '​'
-	display inline-block
-	width 50%
-	min-height 100%
-	background-image url('../img/svg/logo.svg')
-	background-repeat no-repeat
+	&::before
+		content '​'
+		display inline-block
+		width 50%
+		min-height 100%
+		background-image url('../img/svg/logo.svg')
+		background-repeat no-repeat
 
 
 // JS alert
@@ -61,36 +63,36 @@ a:visited
 	background-color rgba(28, 28, 28, 0.88)
 	color pureWhite
 	font-size .8em
-#sticky-nav img
-	border-radius 50%
-#sticky-nav ul
-	display flex
-	flex-direction row
-	gap 25px
-#sticky-nav ul li:last-child
-	outline 1px solid pureWhite
-	outline-offset 7px;
-	border-radius 9px
+	& img
+		border-radius 50%
+	& ul
+		display flex
+		flex-direction row
+		gap 25px
+		& li:last-child
+			outline 1px solid pureWhite
+			outline-offset 7px;
+			border-radius 9px
 
 
 // header
 header
 	background linear-gradient(93.82deg, #542FA7 2.35%, #B2226D 88.4%);
 	text-align center
-// header::after
+// &::after
 // 	display block
 // 	width 100%
 // 	height 100%
 // 	content ''
-header h1
-	font-size 30px
-	font-weight 500
-	color pureWhite
-	padding-top 15px
-header #sub-h1
-	margin-top 20px
-header .get-in-touch-button
-	margin-top 25px
+	& h1
+		font-size 30px
+		font-weight 500
+		color pureWhite
+		padding-top 15px
+	& #sub-h1
+		margin-top 20px
+	& .get-in-touch-button
+		margin-top 25px
 #small-message
 	margin-top 5px
 	line-height 2.2em
@@ -122,25 +124,25 @@ header .get-in-touch-button
 	margin auto
 	max-width 60%
 	border-top 2px solid rgba(255, 255, 255, .2)
-#faq li
-	min-height 68px
-	border-bottom 2px solid rgba(255, 255, 255, .2)
-	vertical-align middle
-	display flex
-	flex-flow column nowrap
-	justify-content center
-	cursor pointer
-#faq li p
-	min-height 0
-	max-height 120px
-	transition min-height .2s ease-out
-	overflow hidden
-	display flex
-	flex-direction column
-	justify-content center
-	cursor initial
-#faq li p.unrolled
-	min-height 120px
+	& li
+		min-height 34px
+		border-bottom 2px solid rgba(255, 255, 255, .2)
+		vertical-align middle
+		display flex
+		flex-direction column
+		justify-content center
+		cursor pointer
+		& p
+			min-height 0
+			max-height 120px
+			transition min-height .2s ease-out
+			overflow hidden
+			display flex
+			flex-direction column
+			justify-content center
+			cursor initial
+			&.unrolled
+				min-height 120px
 
 // footer
 footer
@@ -149,14 +151,14 @@ footer
 	display flex
 	justify-content center
 	gap 60px
-footer address
-	margin-bottom 20px
-footer select
-	background #1D2029
-	border 1px solid #5E6175
-	color braveDarker
-	border-radius 5px
-	padding 6px
-	padding-left 12px
-	font-size 7.5pt
-	min-width 75%
+	& address
+		margin-bottom 20px
+	& select
+		background #1D2029
+		border 1px solid #5E6175
+		color braveDarker
+		border-radius 5px
+		padding 6px
+		padding-left 12px
+		font-size 7.5pt
+		min-width 75%
