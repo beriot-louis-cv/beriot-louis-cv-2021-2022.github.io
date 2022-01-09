@@ -3,9 +3,12 @@
         init() {
             this.dropdown = document.querySelector('#language-dropdown');
             this.faqItem = document.querySelectorAll('#faq li');
+            this.burgerMenuButton = document.querySelector('#sticky-nav .burger-menu');
+            this.burgerMenuContent = document.querySelector('#sticky-nav ul');
 
 			this.submitLanguage();
 			this.unrollFaqItem();
+			this.unrollBurgerMenu();
         },
         submitLanguage() {
             // submit form on dropdown change
@@ -26,6 +29,11 @@
                         return
                     }
                 })
+            })
+        },
+        unrollBurgerMenu() {
+            this.burgerMenuButton.addEventListener('click', () => {
+                this.burgerMenuContent.classList.toggle('opened');
             })
         }
     }
