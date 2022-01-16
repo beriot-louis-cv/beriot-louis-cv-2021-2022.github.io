@@ -3,8 +3,8 @@
         init() {
             this.dropdown = document.querySelector('#language-dropdown');
             this.faqItem = document.querySelectorAll('#faq li');
-            this.burgerMenuButton = document.querySelector('#sticky-nav .burger-menu');
-            this.burgerMenuContent = document.querySelector('#sticky-nav ul');
+            this.burgerMenuButton = document.querySelector('#nav .burger-menu');
+            this.burgerMenuContent = document.querySelector('#nav ul');
 
 			this.submitLanguage();
 			this.unrollFaqItem();
