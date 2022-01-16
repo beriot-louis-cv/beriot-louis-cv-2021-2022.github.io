@@ -54,51 +54,61 @@ a
 #nav
 	position sticky
 	top 0
+	float left
+	width 100vw
 	display flex
 	flex-flow row nowrap
 	justify-content space-between
 	padding 0 1.25em
 	align-items center
-	min-height 10vh
 	background-color rgba(28, 28, 28, 0.88)
 	color pureWhite
 	font-size .8em
+	max-height navBarHeight
 	& img
 		border-radius 50%
 	& ul
 		display flex
-		flex-direction row
+		flex-direction column
 		gap 25px
+		box-shadow 0 4px 0 braveOrange inset // "outline top"
+		min-width 80%
+		background-color #000
+		transform translateY(65%)
+		height 0
+		overflow hidden
+		transition-property height, padding
+		transition-duration .1s
 		& li:last-child
 			outline 1px solid pureWhite
 			outline-offset 7px;
 			border-radius 9px
+		&.opened
+			height initial
+			padding 5%
+	& .burger-menu
+		background none
+		border none
+		background-image url('/img/burger.svg')
+		background-size contain
+		min-width 32px
+		min-height 32px
+		
 
 // mobile
-@media(max-width: 980px)
-	#sticky-nav
-		max-height 1.2vh
-		// this is not centered because of the nav's flex
+@media(min-width: 980px)
+	#nav
+		min-height 10vh
 		& ul
-			box-shadow 0 4px 0 braveOrange inset // "outline top"
-			min-width 80%
-			background-color #000
-			flex-direction column
-			transform translateY(65%)
-			height 0
-			overflow hidden
-			transition-property height, padding
-			transition-duration .1s
-			&.opened
-				height initial
-				padding 35px
+			flex-direction row
+			box-shadow none
+			min-width initial
+			background none
+			transform none
+			height initial
+			overflow initial
 		& .burger-menu
 			background none
-			border none
-			background-image url('/img/burger.svg')
-			background-size contain
-			min-width 64px
-			min-height 64px
 
 
 //mobile with desktop hero graphic
