@@ -67,13 +67,15 @@ a
 		margin-left 1.25em
 		border-radius 50%
 	& ul
+		position absolute
+		left 5%
 		display flex
 		flex-direction column
 		gap 25px
 		box-shadow 0 4px 0 braveOrange inset // "outline top"
 		min-width 80%
 		background-color #000
-		transform translateY(65%)
+		transform translateY(59%)
 		height 0
 		overflow hidden
 		transition-property height, padding
@@ -101,6 +103,7 @@ a
 		min-height 10vh
 		& ul
 			margin-right 1.25em
+			position initial
 			flex-direction row
 			box-shadow none
 			min-width initial
