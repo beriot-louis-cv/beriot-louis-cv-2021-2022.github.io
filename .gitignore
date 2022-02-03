@@ -74,3 +74,6 @@ Thumbs.db
 Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
+
+# Specific
+public/style/main.css
