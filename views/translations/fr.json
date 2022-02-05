@@ -1,5 +1,24 @@
 { 
 	"name": "toba",
 	"jsAlert1": "Quelques endroits du site pourraient ne pas fonctionner comme prévu sans Javascript...",
-	"jsAlert2": "Je vous conseille de l'activer! Je peux vous assurer qu'il n'y a rien de malveillant :)"
+	"jsAlert2": "Je vous conseille de l'activer! Je peux vous assurer qu'il n'y a rien de malveillant :)",
+	"skills": "Compétences",
+	"education": "Parcours",
+	"references": "Références",
+	"hobbies": "Hobbies and autre travaux",
+	"contactMessage": "Get in touch!",
+	"subTitle": "the infographist reimagined",
+	"smallMessage1": "Précoce?",
+	"smallMessage2": "Je comprends, continuons",
+	"review1": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+	"faq1": "Hobbies?",
+	"faqParagraph1": "text goes here",
+	"faq2": "Hobbies?",
+	"faqParagraph2": "text goes here",
+	"faq3": "Hobbies?",
+	"faqParagraph3": "text goes here",
+	"socialMedia": "Média sociaux",
+	"english": "Anglais",
+	"french": "Français",
+	"dutch": "Néerlandais"
 }
