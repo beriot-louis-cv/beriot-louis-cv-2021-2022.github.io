@@ -4,10 +4,21 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var stylus = require('stylus');
+var minify = require('express-minify');
+var compression = require('compression')
 
 var indexRouter = require('./routes/index');
 
 var app = express();
+
+// no idea
+express.static.mime.define(
+  {
+    'text/coffeescript':  ['coffee'],
+    'text/less':          ['less'],
+    'text/x-scss':        ['scss'],
+    'text/stylus':        ['styl']
+  });
 
 // regular setup
 app.set('translation path', path.join(path.resolve(__dirname), '/views/translations'));
@@ -21,13 +32,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(stylus.middleware(path.join(__dirname, 'public')));
+app.use(compression());
+app.use(minify());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // routes
-app.get(/.svgz/, function(req, res, next) {
-  res.set({'Content-Encoding': 'gzip'});
-  next();
-});
 
 app.use('/', indexRouter);
 app.get('/test', function (req, res) {
