@@ -13,12 +13,9 @@ var app = express();
 
 // no idea
 express.static.mime.define(
-  {
-    'text/coffeescript':  ['coffee'],
-    'text/less':          ['less'],
-    'text/x-scss':        ['scss'],
-    'text/stylus':        ['styl']
-  });
+{
+  'text/stylus':        ['styl']
+});
 
 // regular setup
 app.set('translation path', path.join(path.resolve(__dirname), '/views/translations'));
