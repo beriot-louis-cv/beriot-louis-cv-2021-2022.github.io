@@ -12,22 +12,30 @@
 			this.unrollFaqItem();
 			this.unrollBurgerMenu();
         },
+        
+        // get url query parameters
         getQuery() 
         {
             const params = new URLSearchParams(window.location.search);
             this.language = params.get("language");
         },
+        
+        // change the default selection of the language dropdown
         changeLangFormSelected()
         {
             this.dropdownToSelect = document.querySelector(`#language-dropdown option[value='${this.language}']`);
             this.dropdownToSelect.setAttribute('selected', '');
         },
+
+        // submit form on dropdown change
         submitLanguage()
         {
             this.dropdown.addEventListener('change', (e) => {
 				e.target.form.submit();
 			});
         },
+
+        // set unroll capabilities for the faq section
         unrollFaqItem()
         {
             this.faqItem.forEach(el => {
@@ -44,6 +52,8 @@
                 })
             })
         },
+
+        // set burger menu capabilities to unroll
         unrollBurgerMenu()
         {
             this.burgerMenuButton.addEventListener('click', () => {
