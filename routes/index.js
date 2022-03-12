@@ -6,6 +6,9 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
 
+  //TODO: move this somewhere more appropriate
+  const translationPath = req.app.get('translation path');
+
   // get full path to translation file
   let translationFile = path.join(translationPath, req.query.language + '.json');
 
@@ -14,9 +17,19 @@ router.get('/', function(req, res) {
     // if translation file exists, return its content
     if (fs.existsSync(translationFile)) {
       return JSON.parse(fs.readFileSync(translationFile, 'utf8'));
+
     } else {
-      //TODO: make a list of languages from available files
-      translationFile = path.join(req.app.get('translation path'), req.acceptsLanguages('fr', 'nl', 'en') + '.json');
+      
+      // getting a list of all the translation files
+      const availableLanguages = []
+      fs.readdirSync(translationPath, 'utf8').forEach(file => {
+        let fileName = file.slice(0, -5);
+        availableLanguages.push(fileName);
+      });
+      
+      //TODO: acceptslanguages returns false if nothing exists so make this whole bit a function instead
+      // if the queried language doesn't exists, get the browser languages and see if a translation exists
+      translationFile = path.join(translationPath, req.acceptsLanguages(availableLanguages) + '.json');
       if (fs.existsSync(translationFile)) {
         return JSON.parse(fs.readFileSync(translationFile, 'utf8'));
 
