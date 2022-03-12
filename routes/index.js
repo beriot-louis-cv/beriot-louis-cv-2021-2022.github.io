@@ -3,9 +3,15 @@ var path = require('path');
 var fs = require('fs');
 var router = express.Router();
 
+
 router.get('/', function(req, res) {
-  var translationFile = path.join(req.app.get('translation path'), req.query.language + '.json');
+
+  // get full path to translation file
+  let translationFile = path.join(translationPath, req.query.language + '.json');
+
   var translation = ()=>{
+
+    // if translation file exists, return its content
     if (fs.existsSync(translationFile)) {
       return JSON.parse(fs.readFileSync(translationFile, 'utf8'));
     } else {
@@ -13,8 +19,10 @@ router.get('/', function(req, res) {
       translationFile = path.join(req.app.get('translation path'), req.acceptsLanguages('fr', 'nl', 'en') + '.json');
       if (fs.existsSync(translationFile)) {
         return JSON.parse(fs.readFileSync(translationFile, 'utf8'));
+
       } else {
-        translationFile = path.join(req.app.get('translation path'), 'en' + '.json');
+        // if all else fails, give english translation
+        translationFile = path.join(translationPath, 'en' + '.json');
       }
     };
   }
