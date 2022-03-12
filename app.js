@@ -34,7 +34,6 @@ app.use(minify());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // routes
-
 app.use('/', indexRouter);
 app.get('/test', function (req, res) {
   res.render('./includes/_review-card.pug')
