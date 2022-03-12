@@ -7,6 +7,7 @@
             this.burgerMenuContent = document.querySelector('#nav ul');
 
             this.getQuery();
+            this.changeLangFormSelected();
 			this.submitLanguage();
 			this.unrollFaqItem();
 			this.unrollBurgerMenu();
@@ -15,6 +16,11 @@
         {
             const params = new URLSearchParams(window.location.search);
             this.language = params.get("language");
+        },
+        changeLangFormSelected()
+        {
+            this.dropdownToSelect = document.querySelector(`#language-dropdown option[value='${this.language}']`);
+            this.dropdownToSelect.setAttribute('selected', '');
         },
         submitLanguage()
         {
