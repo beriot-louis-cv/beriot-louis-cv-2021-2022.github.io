@@ -6,17 +6,24 @@
             this.burgerMenuButton = document.querySelector('#nav .burger-menu');
             this.burgerMenuContent = document.querySelector('#nav ul');
 
+            this.getQuery();
 			this.submitLanguage();
 			this.unrollFaqItem();
 			this.unrollBurgerMenu();
         },
-        submitLanguage() {
-            // submit form on dropdown change
+        getQuery() 
+        {
+            const params = new URLSearchParams(window.location.search);
+            this.language = params.get("language");
+        },
+        submitLanguage()
+        {
             this.dropdown.addEventListener('change', (e) => {
 				e.target.form.submit();
 			});
         },
-        unrollFaqItem() {
+        unrollFaqItem()
+        {
             this.faqItem.forEach(el => {
                 // sets height to 0 in js so the content can still be read without
                 el.children[1].style.height = '0';
@@ -31,7 +38,8 @@
                 })
             })
         },
-        unrollBurgerMenu() {
+        unrollBurgerMenu()
+        {
             this.burgerMenuButton.addEventListener('click', () => {
                 this.burgerMenuContent.classList.toggle('opened');
             })
