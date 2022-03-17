@@ -23,7 +23,7 @@ router.get('/', function(req, res) {
       // getting a list of all the translation files
       const availableLanguages = []
       fs.readdirSync(translationPath, 'utf8').forEach(file => {
-        let fileName = file.slice(0, -5);
+        let fileName = file.split('.', 1);
         availableLanguages.push(fileName);
       });
       
