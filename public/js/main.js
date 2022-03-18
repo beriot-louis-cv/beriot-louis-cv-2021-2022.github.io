@@ -23,7 +23,7 @@
         // change the default selection of the language dropdown
         changeLangFormSelected()
         {
-            this.dropdownToSelect = document.querySelector(`#language-dropdown option[value='${this.language}']`);
+            this.dropdownToSelect = document.querySelector(`#language-dropdown option[value="${this.language ?? 'en'}"]`);
             this.dropdownToSelect.setAttribute('selected', '');
         },
 
